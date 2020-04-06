@@ -1,0 +1,16 @@
+<h1>ID: {{libroId}}</h1>
+
+    
+
+<div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+    <img class="card-img-top" alt="Thumbnail [100%x225]" src="{{libroClick.imagen}}"
+        style="height: 225px; width: 100%; display: block;">
+    <div class="card-body">
+        <h5 class="card-title">{{libroClick.titulo}}</h5>
+        <h6 class="autor">{{libroClick.autor}}</h6>
+        <p class="card-text">Descripcion: {{libroClick.descripcion}}</p>
+        <!--<a class="btn btn-primary" (click) = "agregarLibro(libroClick)" [routerLink]="['/informacion', libro.id]">Ver detalles</a>-->
+    </div>
+    </div>
+</div>

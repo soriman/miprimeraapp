@@ -1,0 +1,26 @@
+<div class="loader" *ngIf="cargando"></div>
+<div *ngIf="errorHttp" class="alert alert-danger" role="alert">Hay un error con la carga del archivo</div>
+
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let libro of libros">
+        <div #elementoDOM class="card mb-4 box-shadow" (click)="selectedMethod(elementoDOM)" (mouseenter)="enterMethod(elementoDOM)" (mouseleave)="leaveMethod(elementoDOM)">
+          <img class="card-img-top"  alt="Thumbnail [100%x225]" src="{{libro.imagen}}" style="height: 225px; width: 100%; display: block;">
+          <div class="card-body">
+            <h5 class="card-title">{{libro.titulo}}</h5>
+            <h6 class="autor">{{libro.autor}}</h6>
+            <p class="card-text">Descripcion: {{libro.descripcion}}</p>
+            <a class="btn btn-primary" (click)="agregarLibro(libro)" [routerLink]="['/informacion', libro.id]">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+
+ 
+
+    </div>
+  </div>
+</div>

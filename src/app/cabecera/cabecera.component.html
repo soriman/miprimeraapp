@@ -1,0 +1,21 @@
+
+<ul class="nav nav-pills">
+  
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/listado-libros']" routerLinkActive="active"> Listado libros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/sobre-nosotros']" routerLinkActive="active">Sobre Nosotros</a>
+    </li>
+</ul>
+
+
+
+ <h3>Libros vistos</h3>
+
+ <ul *ngIf="libroVisto.verListado()">
+     <li *ngFor="let libro of libroVisto.verListado()">{{libro.titulo}}</li>
+ </ul>
